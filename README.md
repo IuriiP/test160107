@@ -20,7 +20,14 @@ The minimum requirement by this project template that your Web server supports P
 INSTALLATION
 ------------
 
-### Fork project from GIT
+### Fork/clone project from GIT
+
+I.e. just clone:
+
+~~~
+cd /var/www
+git clone https://github.com/IuriiP/test160107.git gittest
+~~~
 
 
 ### Install dependencies via Composer
@@ -39,11 +46,11 @@ CONFIGURATION
 
 ### Apache
 
-Create the virtual host to `<yourProjectsPath>/web`:
+Create the virtual host to `/var/www/gittest/web`:
 
 ```
-	DocumentRoot <yourProjectsPath>/web
-	<Directory <yourProjectsPath>/web>
+	DocumentRoot /var/www/gittest/web
+	<Directory /var/www/gittest/web>
 		 Options Indexes FollowSymLinks MultiViews
 		 AllowOverride All
 		 Order allow,deny
