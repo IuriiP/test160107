@@ -20,7 +20,7 @@ $this->title = 'My Yii Application';
                     <p class="lead">You need to login first for manage your bookshelves :)</p>
                     <p><a class="btn btn-default" href="/user/login">Login</a></p>
                 <?php else: ?>
-                    <h2>Hello, <?= Yii::$app->user->username ?></h2>
+                    <h2>Hello, <?= Yii::$app->user->identity->username ?></h2>
                     <p class="lead">You can manage your bookshelf.</p>
 
                     <p><a class="btn btn-lg btn-success" href="/books/index">Manage the Bookshelf</a></p>
