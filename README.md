@@ -103,3 +103,12 @@ Load the fixtures to database:
 ~~~
 php yii fixture/load authors
 ~~~
+
+### Last minute update
+
+*2016-01-09 14:30*
+
+Added my little extension for the universal popup features.
+
+See more about [Popup with AJAX loading extension](https://github.com/IuriiP/yii2-popajax.git)
+
