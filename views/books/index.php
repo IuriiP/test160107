@@ -3,8 +3,9 @@
 use yii\web\View;
 use yii\helpers\Html;
 use yii\grid\GridView;
-use yii\bootstrap\Modal;
 use yii\widgets\Pjax;
+use newerton\fancybox\FancyBox;
+use iuriip\yii2\Popup;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\BookSearch */
@@ -52,10 +53,12 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);
                             },
                                     'view' => function ($url, $model) {
-                                return Html::a('<span class="glyphicon glyphicon-eye-open modalButton"></span>', "#", [
+                                return Html::a('<span class="glyphicon glyphicon-eye-open"></span>', "#", [
                                             'title' => Yii::t('app', 'View'),
-                                            'value' => $url,
-                                            'data-pjax' => 'modalContent',
+                                            'class' => 'modal-button',
+                                            'modal-href' => $url,
+                                            'modal-target' => '#modal',
+                                            'data-pjax' => '0',
                                 ]);
                             },
                                 ]
@@ -66,8 +69,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <?php Pjax::end(); ?>
 
-                <?php
-                echo newerton\fancybox\FancyBox::widget([
+                <?=
+                FancyBox::widget([
                     'target' => 'a[rel=fancybox]',
                     'helpers' => true,
                     'mouse' => true,
@@ -101,7 +104,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]);
                 ?>
                 <?php
-                Modal::begin([
+                Popup::begin([
                     'header' => 'Preview',
                     'id' => 'modal',
                     'size' => 'modal-lg',
@@ -109,9 +112,5 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 echo '<div id="modalContent"></div>';
 
-                Modal::end();
-                ?>
-                <?php
-                $this->registerJs('$(function(){$(".modalButton").click(function(){console.log($(this));$("#modal").modal("show").find("#modalContent").load($(this).closest("a").attr("value"));});});'
-                        , View::POS_READY);
+                Popup::end();
                 ?>

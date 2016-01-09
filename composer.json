@@ -23,13 +23,20 @@
         "yiisoft/yii2-faker": "^2.0",
         "kartik-v/yii2-widget-fileinput": "@dev",
         "kartik-v/yii2-widgets": "*",
-        "newerton/yii2-fancybox": "dev-master"
+        "newerton/yii2-fancybox": "dev-master",
+        "iuriip/yii2-popajax": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
         "yiisoft/yii2-debug": "*",
         "yiisoft/yii2-gii": "*"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/IuriiP/yii2-popajax.git"
+        }
+        ],
     "config": {
         "process-timeout": 1800
     },

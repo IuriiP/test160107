@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fc02b71c51c7e6729585b210ccaaf5d1",
-    "content-hash": "4e5ebfb597a27abd4006f22e8c7f5b7e",
+    "hash": "34631683e77951aa2ca21ef015c4faac",
+    "content-hash": "5adee5ac7e15e43cd1ff4f10d51e3ab1",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -543,6 +543,44 @@
                 "fixtures"
             ],
             "time": "2015-05-29 06:29:14"
+        },
+        {
+            "name": "iuriip/yii2-popajax",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/IuriiP/yii2-popajax.git",
+                "reference": "32dee7eff63fbf7670e3641f47f0a2263423ae7c"
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "iuriip\\yii2\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Iurii Prudius",
+                    "email": "hardwork.mouse@gmail.com"
+                }
+            ],
+            "description": "Loadable popup extension for Yii2",
+            "keywords": [
+                "ajax",
+                "modal",
+                "popup",
+                "yii2"
+            ],
+            "support": {
+                "source": "https://github.com/IuriiP/yii2-popajax.git"
+            },
+            "time": "2016-01-09 12:26:47"
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
@@ -2358,7 +2396,8 @@
     "stability-flags": {
         "dektrium/yii2-user": 20,
         "kartik-v/yii2-widget-fileinput": 20,
-        "newerton/yii2-fancybox": 20
+        "newerton/yii2-fancybox": 20,
+        "iuriip/yii2-popajax": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
